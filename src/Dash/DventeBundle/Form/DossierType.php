@@ -11,7 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
-use Dash\CoreBundle\Form\DocumentType;
+
 
 class DossierType extends AbstractType
 {
@@ -26,7 +26,6 @@ class DossierType extends AbstractType
                 ->add('email', EmailType::class)
                 ->add('rcheque', CheckboxType::class)
                 ->add('chgranite', CheckboxType::class)
-                ->add('document', DocumentType::class, array('required' => false))
                 ->add('prestpose', ChoiceType::class, array('choices' => array(
                                                                     'Pose' => 'Pose',
                                                                     'Aide' => 'Aide',

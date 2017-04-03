@@ -80,11 +80,6 @@ class Dossier
     private $chgranite;
 
     /**
-     * @ORM\OneToOne(targetEntity="Dash\CoreBundle\Entity\Document", cascade={"persist", "remove"})
-     */
-    private $document;
-
-    /**
      * @var string
      *
      * @ORM\Column(name="prestpose", type="string", length=255)
@@ -270,29 +265,6 @@ class Dossier
         return $this->chgranite;
     }
 
-    /**
-     * Set photo
-     *
-     * @param string $photo
-     *
-     * @return Dossier
-     */
-    public function setDocument($document)
-    {
-        $this->document = $document;
-
-        return $this;
-    }
-
-    /**
-     * Get photo
-     *
-     * @return string
-     */
-    public function getDocument()
-    {
-        return $this->document;
-    }
 
     /**
      * Set prestpose
