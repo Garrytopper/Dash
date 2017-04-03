@@ -1,0 +1,51 @@
+dash_dvente_new:
+    path:    /newDossier/{id}
+    defaults: 
+        _controller: DashDventeBundle:Dvente:new
+    requirements: 
+        id: \d+
+
+dash_dvente_liste:
+    path:    /DventeListe 
+    defaults:
+        _controller: DashDventeBundle:Dvente:liste
+
+dash_dvente_modif:
+    path:    /DventeModif/{id}
+    defaults:
+        _controller: DashDventeBundle:Dvente:modif 
+    requirements:
+        id: \d+
+
+dash_dvente_supp:
+    path:    /DventeSupp/{id}
+    defaults:
+        _controller: DashDventeBundle:Dvente:supp 
+    requirements:
+        id: \d+
+
+dash_dvente_new_rcheque:
+    path:    /Rcheque/new/{id}
+    defaults:
+        _controller: DashDventeBundle:Rcheque:new
+    requirements: 
+        id: \d+
+
+dash_dvente_listeRcheque:
+    path:    /RchequeListe
+    defaults:
+        _controller: DashDventeBundle:Rcheque:liste
+
+dash_dvente_modif_rcheque:
+    path:    /Rcheque/modif/{id}
+    defaults:
+        _controller: DashDventeBundle:Rcheque:modif
+    requirements:
+        id: \d+
+
+dash_dvente_supp_rcheque:
+    path:    /Rcheque/supp/{id}
+    defaults: 
+        _controller: DashDventeBundle:Rcheque:supp
+    requirements: 
+        id: \d+

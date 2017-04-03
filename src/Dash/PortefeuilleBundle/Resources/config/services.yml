@@ -1,0 +1,9 @@
+services:
+#    dash_portefeuille.example:
+#        class: Dash\PortefeuilleBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    dash_portefeuille.clientModificator:
+        class: Dash\PortefeuilleBundle\ClientModificator\ClientModificator 
+
+    

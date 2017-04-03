@@ -1,0 +1,9 @@
+services:
+#    dash_dvente.example:
+#        class: Dash\DventeBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    dash_dvente.gestionVente:
+        class: Dash\DventeBundle\GestionVente\GestionVente
+        arguments:
+            - "@router"

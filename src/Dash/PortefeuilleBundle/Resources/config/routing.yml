@@ -1,0 +1,23 @@
+dash_portefeuille_nouveau:
+    path:     /nouveauClient
+    defaults: 
+        _controller: DashPortefeuilleBundle:Portefeuille:nouveau 
+
+dash_portefeuille_listeGeneral:
+    path:    /listeGeneral 
+    defaults:
+        _controller: DashPortefeuilleBundle:Portefeuille:listeGeneral
+
+dash_portefeuille_modif:
+    path:    /modif/{id}
+    defaults:
+        _controller: DashPortefeuilleBundle:Portefeuille:modif
+    requirements:
+        id: \d+
+
+dash_portefeuille_supp:
+    path: /supp/{id}
+    defaults:
+        _controller: DashPortefeuilleBundle:Portefeuille:supp
+    requirements:
+        id: \d+

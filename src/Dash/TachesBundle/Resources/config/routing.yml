@@ -1,0 +1,28 @@
+dash_taches_new:
+    path:     /new
+    defaults: 
+        _controller: DashTachesBundle:Task:new 
+
+dash_taches_liste:
+    path:    /listeGlobal
+    defaults:
+        _controller: DashTachesBundle:Task:listeGlobal
+
+dash_taches_modif:
+    path:    /modif/{id}
+    defaults:
+        _controller: DashTachesBundle:Task:modif
+    requirements:
+        id: \d+
+
+dash_taches_supp:
+    path:    /supp/{id}
+    defaults:
+        _controller: DashTachesBundle:Task:supp
+    requirements:
+        id: \d+
+
+dash_taches_test:
+    path:    /test 
+    defaults:
+        _controller: DashTachesBundle:Task:test

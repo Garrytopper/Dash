@@ -1,0 +1,20 @@
+{% extends 'DashCoreBundle::coreLayout.html.twig' %}
+{% block body %}
+    <div style="background-color: white;" class="row">
+        <div class="col-xs-12 tampon"></div>
+        <div class="col-xs-12 center">Impossible de supprimer <span style="color: red;">{{ client.nom }}</span> car il possède un dossier de vente</div>
+        <div class="col-xs-12 tampon"></div>
+        <a href="{{ path('dash_dvente_modif', {'id': client.id}) }}">
+             <div class="col-xs-offset-3 col-xs-6 btn btn-info">Dossier de vente</div>
+        </a>
+        <div class="col-xs-12 tampon"></div> 
+    </div>
+{% endblock %}
+
+{% block menu %}
+    <div class="col-xs-12 center">
+        <a href="{{ path('dash_core_homepage') }}">
+            <img class="logo" src=" {{ asset('bundles/dashcore/image/home.png')}} ">
+        </a>
+    </div>
+{% endblock %}

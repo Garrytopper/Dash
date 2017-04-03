@@ -1,0 +1,21 @@
+{% extends 'DashCoreBundle::coreLayout.html.twig' %}
+
+{% block body %}
+    <div class="col-xs-12 tampon"></div>
+    <div class="col-xs-12 white">
+        {{ form(form) }}
+    </div>
+{% endblock %}
+
+{% block menu %}
+    <div class="col-xs-6 center">
+        <a href="{{ path('dash_core_homepage') }}">
+            <img class="logo" src=" {{ asset('bundles/dashcore/image/home.png')}} ">
+        </a>
+    </div>
+    <div class="col-xs-6 center">
+        <a href="{{ path('dash_taches_liste') }}">
+            <img class="logo" src=" {{ asset('bundles/dashcore/image/Tneutre.png')}} ">
+        </a>
+    </div>
+{% endblock %}

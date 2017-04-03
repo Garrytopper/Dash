@@ -1,0 +1,9 @@
+{% extends 'DashCoreBundle::coreLayout.html.twig' %}
+{% block body %}
+    {{ form(form) }}
+    <div class="row center">
+        <a href="{{ path('dash_core_homepage') }}">
+            <img class="logo" src="{{ asset('bundles/dashcore/image/home.png') }}">
+        </a>
+    </div>
+{% endblock %}

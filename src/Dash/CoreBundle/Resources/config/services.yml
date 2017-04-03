@@ -1,0 +1,13 @@
+services:
+#    dash_core.example:
+#        class: Dash\CoreBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    dash_core.doctrineListener_applications:
+        class: Dash\CoreBundle\DoctrineListener\DoctrineListenerApplications
+        arguments:
+            - "@dash_portefeuille.clientModificator"
+            - "@dash_taches.task_creator"
+            - "@dash_dvente.gestionVente"
+        tags:
+            - {name: doctrine.event_listener, event: preUpdate}

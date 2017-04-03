@@ -1,0 +1,226 @@
+{% extends 'DashCoreBundle::coreLayout.html.twig' %}
+
+{% block body %}
+    <div class="row white">
+        
+        <!-- Dessin  -->
+        <div class="row">
+            <div id="Dessin" class="col-xs-12 center {% if Dessin|length < 1 %}hidden{% endif %}">
+                <div class="col-xs-12 tampon"></div>
+                <div class="row">
+                    <img class="logoT" src="{{ asset('bundles/dashcore/image/Tdessin.png') }}">
+                </div>
+                <div class="row">
+                    {{ Dessin|length }}
+                </div>
+            </div>
+            <!-- dessin hidden -->
+            <div id="DessinHidden" class="col-xs-12 hidden">
+                {% for client in Dessin %}
+                    <a href="{{ path('dash_taches_modif', {'id': client.id}) }}">
+                        <div class="col-xs-8 ">{{ client.description }}</div>
+                        {% if client.client is not null %}
+                            <div class="col-xs-4 ">{{ client.client.dateRdv|date('d-m') }}</div>
+                        {% else %}
+                            <div class="col-xs-4 ">...</div>
+                        {% endif %}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- PlanT  -->
+        <div class="row">
+            <div id="PlanT" class="col-xs-12 center {% if Ptech|length < 1 %}hidden{% endif %}">
+                <div class="col-xs-12 tampon"></div>
+                <div class="row">
+                     <img class="logoT" src="{{ asset('bundles/dashcore/image/TplanT.png') }}">
+                </div>
+                <div class="row">
+                    {{ Ptech|length }}
+                </div>
+            </div>
+            <!-- PlanT hidden -->
+            <div id="PlanTHidden" class="col-xs-12 hidden">
+                {% for client in Ptech %}
+                    <a href="{{ path('dash_taches_modif', {'id': client.id}) }}">
+                        <div class="col-xs-8 ">{{ client.description }}</div>
+                        {% if client.client is not null %}
+                            <div class="col-xs-4 ">{{ client.client.dateCloture|date('d-m') }}</div>
+                        {% else %}
+                            <div class="col-xs-12">...</div>
+                        {% endif %}
+                    </a>
+                {% endfor %}
+                <div class="col-xs-12 tampon"></div>
+            </div>
+        </div>
+
+        <!-- DossierM -->
+        <div class="row">
+            <div id="Dmetre" class="col-xs-12 center {% if Dmetre|length < 1 %}hidden{% endif %}">
+                <div class="col-xs-12 tampon"></div>
+                <div class="row">
+                     <img class="logoT" src="{{ asset('bundles/dashcore/image/TdossierM.png') }}">
+                </div>
+                <div class="row">
+                    {{ Dmetre|length }}
+                </div>
+            </div>
+            <!-- Dmetre hidden -->
+            <div id="DmetreHidden" class="col-xs-12 hidden">
+                {% for client in Dmetre %}
+                    <a href="{{ path('dash_taches_modif', {'id': client.id}) }}">
+                        <div class="col-xs-12 ">{{ client.description }}</div>
+                    </a>
+                {% endfor %}
+                <div class="col-xs-12 tampon"></div>
+            </div>
+        </div>
+
+        <!-- DossierP  -->
+        <div class="row">
+            <div id="Dpose" class="col-xs-12 center {% if Dpose|length < 1 %}hidden{% endif %}">
+                <div class="col-xs-12 tampon"></div>
+                <div class="row">
+                     <img class="logoT" src="{{ asset('bundles/dashcore/image/TdossierP.png') }}">
+                </div>
+                <div class="row">
+                    {{ Dpose|length }}
+                </div>
+            </div>
+            <!-- Dpose hidden -->
+            <div id="DposeHidden" class="col-xs-12 hidden">
+                {% for client in Dpose %}
+                    <a href="{{ path('dash_taches_modif', {'id': client.id}) }}">
+                        <div class="col-xs-12 ">{{ client.description }}</div>
+                    </a>
+                {% endfor %}
+                <div class="col-xs-12 tampon"></div>
+            </div>
+        </div>
+
+        <!-- Command -->
+        <div class="row">
+            <div id="Command" class="col-xs-12 center {% if Command|length < 1 %}hidden{% endif %}">
+                <div class="col-xs-12 tampon"></div>
+                <div class="row">
+                     <img class="logoT" src="{{ asset('bundles/dashcore/image/TCommand.png') }}">
+                </div>
+                <div class="row">
+                    {{ Command|length }}
+                </div>
+            </div>
+             <!-- Command hidden -->
+            <div id="CommandHidden" class="col-xs-12 hidden">
+                {% for client in Command %}
+                    <a href="{{ path('dash_taches_modif', {'id': client.id}) }}">
+                        <div class="col-xs-12">{{ client.description }}</div>
+                    </a>
+                {% endfor %}
+                <div class="col-xs-12 tampon"></div>
+            </div>
+        </div>
+
+        <!-- Facture  -->
+        <div class="row">
+            <div id="Facture" class="col-xs-12 center {% if Faccompte|length < 1 %}hidden{% endif %}">
+                <div class="col-xs-12 tampon"></div>
+                <div class="row">
+                     <img class="logoT" src="{{ asset('bundles/dashcore/image/Tfacture.png') }}">
+                </div>
+                <div class="row">
+                    {{ Faccompte|length }}
+                </div>
+            </div>
+            <!-- Faccompte hidden -->
+            <div id="FactureHidden" class="col-xs-12 hidden">
+                    {% for client in Faccompte %}
+                        <a href="{{ path('dash_taches_modif', {'id': client.id}) }}">
+                            <div class="col-xs-12">{{ client.description }}</div>
+                        </a>
+                    {% endfor %}
+                    <div class="col-xs-12 tampon"></div>
+            </div>
+        </div>
+
+        <!-- RelC  -->
+        <div class="row">
+            <div id="Rcheque" class="col-xs-12 center {% if Rcheque|length < 1 %}hidden{% endif %}">
+                <div class="col-xs-12 tampon"></div>
+                <div class="row">
+                     <img class="logoT" src="{{ asset('bundles/dashcore/image/TrelC.png') }}">
+                </div>
+                <div class="row">
+                    {{ Rcheque|length }}
+                </div>
+            </div>
+            <!-- Rcheque hidden -->
+            <div id="RchequeHidden" class="col-xs-12 hidden">
+                {% for client in Rcheque %}
+                    <a href="{{ path('dash_taches_modif', {'id': client.id}) }}">
+                        <div class="col-xs-12">{{ client.description }}</div>
+                    </a>
+                {% endfor %}
+                <div class="col-xs-12 tampon"></div>
+            </div>
+        </div>
+
+        <!-- App  -->
+        <div class="row">
+            <div id="App" class="col-xs-12 center {% if App|length < 1 %}hidden{% endif %}">
+                <div class="col-xs-12 tampon"></div>
+                <div class="row">
+                     <img class="logoT" src="{{ asset('bundles/dashcore/image/Tapp.png') }}">
+                </div>
+                <div class="row">
+                    {{ App|length }}
+                </div>
+            </div>
+            <!-- App hidden -->
+            <div id="AppHidden" class="col-xs-12 hidden">
+                {% for client in App%}
+                    <a href="{{ path('dash_taches_modif', {'id': client.id}) }}">
+                        <div class="col-xs-12">{{ client.description }}</div>
+                    </a>
+                {% endfor %}
+                <div class="col-xs-12 tampon"></div>
+            </div>
+        </div>
+
+        <!-- Autre  -->
+        <div class="row">
+            <div id="Autre" class="col-xs-12 center {% if Autre|length < 1 %}hidden{% endif %}">
+                <div class="col-xs-12 tampon"></div>
+                <div class="row">
+                     <img class="logoT" src="{{ asset('bundles/dashcore/image/Tautre.png') }}">
+                </div>
+                <div class="row">
+                    {{ Autre|length }}
+                </div>
+            </div>
+            <!-- Autre hidden -->
+            <div id="AutreHidden" class="col-xs-12 hidden">
+                {% for client in Autre%}
+                    <a href="{{ path('dash_taches_modif', {'id': client.id}) }}">
+                        <div class="col-xs-12 "><p>{{ client.description }}</p></div>
+                    </a>
+                {% endfor %}
+                <div class="col-xs-12 tampon"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block menu %}
+    <div class="col-xs-6 center">
+        <a href="{{ path('dash_core_homepage') }}">
+            <img class="logo" src=" {{ asset('bundles/dashcore/image/home.png')}} ">
+        </a>
+    </div>
+    <div class="col-xs-6 center">
+        <a href="{{ path('dash_taches_new') }}">
+            <img class="logo" src=" {{ asset('bundles/dashcore/image/ajout.png')}} ">
+        </a>
+    </div>
+{% endblock %}

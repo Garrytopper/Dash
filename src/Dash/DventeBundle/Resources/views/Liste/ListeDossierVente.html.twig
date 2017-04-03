@@ -1,0 +1,37 @@
+{% extends 'DashCoreBundle::coreLayout.html.twig'%}
+{% block body %}
+    <div class="row white">
+        <div class="col-xs-12 tampon"></div>
+        <div class="col-xs-3"><img class="logo" src="{{ asset('bundles/dashcore/image/Dvente.png') }}"></div>
+        <div class="col-xs-12 tampon"></div>
+        {% if Dventes|length == 0 %}
+            <div class="row center white">Tu n'as encore rien vendu</div>
+        {% else %}
+            {% for dVente in Dventes %}
+                <div class="row">
+                    <a href="{{ path('dash_dvente_modif', {'id': dVente.id}) }}">
+                        <div class="col-xs-4 center">{{ dVente.client.nom }}</div>
+                        <div class="col-xs-offset-2 col-xs-6">Livraison : {{ dVente.dateliv|date('m/y')}}</div>
+                    </a>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}
+{% block menu %}
+     <div class="col-xs-4 center">
+        <a href="{{ path('dash_core_homepage') }}">
+            <img class="logo" src=" {{ asset('bundles/dashcore/image/home.png')}} ">
+        </a>
+    </div>
+    <div class="col-xs-4 center">
+        <a href="{{ path('dash_dvente_listeRcheque') }}">
+            <img class="logo" src=" {{ asset('bundles/dashcore/image/Rcheque.png')}} ">
+        </a>
+    </div>
+    <div class="col-xs-4 center">
+        <a href="{{ path('dash_core_homepage') }}">
+            <img class="logo" src=" {{ asset('bundles/dashcore/image/Ppierre.png')}} ">
+        </a>
+    </div>
+{% endblock %}

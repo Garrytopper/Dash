@@ -1,0 +1,9 @@
+dash_core_homepage:
+    path:     /
+    defaults: { _controller: DashCoreBundle:Core:index }
+
+dash_core_objectif:
+    path:    /objectif 
+    defaults:
+        _controller: DashCoreBundle:Core:objectif
+

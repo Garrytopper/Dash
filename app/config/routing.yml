@@ -1,0 +1,20 @@
+dash_dvente:
+    resource: "@DashDventeBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+dash_taches:
+    resource: "@DashTachesBundle/Resources/config/routing.yml"
+    prefix:   /ListeDeTache
+
+dash_portefeuille:
+    resource: "@DashPortefeuilleBundle/Resources/config/routing.yml"
+    prefix:   /Portefeuille
+
+dash_core:
+    resource: "@DashCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

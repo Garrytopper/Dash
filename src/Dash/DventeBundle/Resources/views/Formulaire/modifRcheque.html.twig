@@ -1,0 +1,21 @@
+{% extends 'DashCoreBundle::coreLayout.html.twig' %}
+
+{% block body %}
+    <div class="col-xs-12 white">
+        <div class="col-xs-12 tampon"></div>
+         {{ form(form) }}
+    </div>
+    <a href="{{ path('dash_dvente_supp_rcheque', {'id': id}) }}"><div class="col-xs-12 titre btn btn-danger">Supprimer</div></a>
+{% endblock %} 
+{% block menu %}
+    <div class="col-xs-6 center">
+            <a href="{{ path('dash_core_homepage') }}">
+                <img class="logo" src=" {{ asset('bundles/dashcore/image/home.png')}} ">
+            </a>
+         </div>
+    <div class="col-xs-6 center">
+        <a href="{{ path('dash_dvente_listeRcheque') }}">
+            <img class="logo" src=" {{ asset('bundles/dashcore/image/Rcheque.png')}} ">
+        </a>
+    </div>
+{% endblock %} 

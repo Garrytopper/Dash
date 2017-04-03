@@ -1,0 +1,196 @@
+<?php
+
+namespace Dash\DventeBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Dash\DventeBundle\Entity\Dossier;
+
+/**
+ * Rcheque
+ *
+ * @ORM\Table(name="rcheque")
+ * @ORM\Entity(repositoryClass="Dash\DventeBundle\Repository\RchequeRepository")
+ */
+class Rcheque
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     */
+    private $id;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="montant", type="integer")
+     */
+    private $montant;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dateRel", type="datetime")
+     */
+    private $dateRel;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="historique", type="string", length=255, nullable=true)
+     */
+    private $historique;
+
+    /**
+     * @ORM\OneToOne(targetEntity="Dash\DventeBundle\Entity\Dossier")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $dossier;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nomCheque", type="string", length=255)
+     */
+    private $nomCheque;
+
+    public function __construct(DOSSIER $dossier)
+    {
+        $this->dateRel = new \DateTime('now');
+        $this->nomCheque = $dossier->getClient()->getNom();
+        $this->dossier = $dossier;
+        $this->id = $dossier->getId();
+    }
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set montant
+     *
+     * @param integer $montant
+     *
+     * @return Rcheque
+     */
+    public function setMontant($montant)
+    {
+        $this->montant = $montant;
+
+        return $this;
+    }
+
+    /**
+     * Get montant
+     *
+     * @return int
+     */
+    public function getMontant()
+    {
+        return $this->montant;
+    }
+
+    /**
+     * Set dateRel
+     *
+     * @param \DateTime $dateRel
+     *
+     * @return Rcheque
+     */
+    public function setDateRel($dateRel)
+    {
+        $this->dateRel = $dateRel;
+
+        return $this;
+    }
+
+    /**
+     * Get dateRel
+     *
+     * @return \DateTime
+     */
+    public function getDateRel()
+    {
+        return $this->dateRel;
+    }
+
+    /**
+     * Set historique
+     *
+     * @param string $historique
+     *
+     * @return Rcheque
+     */
+    public function setHistorique($historique)
+    {
+        $this->historique = $historique;
+
+        return $this;
+    }
+
+    /**
+     * Get historique
+     *
+     * @return string
+     */
+    public function getHistorique()
+    {
+        return $this->historique;
+    }
+
+    /**
+     * Set client
+     *
+     * @param \stdClass $client
+     *
+     * @return Rcheque
+     */
+    public function setClient($client)
+    {
+        $this->client = $client;
+
+        return $this;
+    }
+
+    /**
+     * Get client
+     *
+     * @return \stdClass
+     */
+    public function getClient()
+    {
+        return $this->client;
+    }
+
+    /**
+     * Set nomCheque
+     *
+     * @param string $nomCheque
+     *
+     * @return Rcheque
+     */
+    public function setNomCheque($nomCheque)
+    {
+        $this->nomCheque = $nomCheque;
+
+        return $this;
+    }
+
+    /**
+     * Get nomCheque
+     *
+     * @return string
+     */
+    public function getNomCheque()
+    {
+        return $this->nomCheque;
+    }
+}
+
