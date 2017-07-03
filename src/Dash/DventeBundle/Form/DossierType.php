@@ -24,8 +24,8 @@ class DossierType extends AbstractType
                 ->add('ville', TextType::class)
                 ->add('cp', TextType::class)
                 ->add('email', EmailType::class)
-                ->add('rcheque', CheckboxType::class)
-                ->add('chgranite', CheckboxType::class)
+                ->add('rcheque', CheckboxType::class, array('required' => false))
+                ->add('chgranite', CheckboxType::class, array('required' => false))
                 ->add('prestpose', ChoiceType::class, array('choices' => array(
                                                                     'Pose' => 'Pose',
                                                                     'Aide' => 'Aide',

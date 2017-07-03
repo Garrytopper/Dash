@@ -64,10 +64,10 @@ class Dossier extends \Dash\DventeBundle\Entity\Dossier implements \Doctrine\ORM
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'id', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'client', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'etatDossier', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'dateCreation', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'rue', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'ville', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'cp', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'email', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'rcheque', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'chgranite', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'photo', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'prestpose', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'prestliv', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'dateliv'];
+            return ['__isInitialized__', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'id', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'client', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'etatDossier', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'dateCreation', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'rue', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'ville', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'cp', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'email', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'rcheque', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'chgranite', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'prestpose', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'prestliv', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'dateliv'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'id', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'client', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'etatDossier', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'dateCreation', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'rue', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'ville', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'cp', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'email', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'rcheque', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'chgranite', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'photo', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'prestpose', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'prestliv', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'dateliv'];
+        return ['__isInitialized__', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'id', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'client', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'etatDossier', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'dateCreation', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'rue', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'ville', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'cp', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'email', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'rcheque', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'chgranite', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'prestpose', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'prestliv', '' . "\0" . 'Dash\\DventeBundle\\Entity\\Dossier' . "\0" . 'dateliv'];
     }
 
     /**
@@ -318,28 +318,6 @@ class Dossier extends \Dash\DventeBundle\Entity\Dossier implements \Doctrine\ORM
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getChgranite', []);
 
         return parent::getChgranite();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setPhoto($photo)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPhoto', [$photo]);
-
-        return parent::setPhoto($photo);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getPhoto()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPhoto', []);
-
-        return parent::getPhoto();
     }
 
     /**

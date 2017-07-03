@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new Dash\PortefeuilleBundle\DashPortefeuilleBundle(),
             new Dash\TachesBundle\DashTachesBundle(),
             new Dash\DventeBundle\DashDventeBundle(),
+            new Dash\SecurityBundle\DashSecurityBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

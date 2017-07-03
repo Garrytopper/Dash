@@ -15,7 +15,8 @@ security:
                 users:
                     user:   { password: userpass, roles: [ 'ROLE_USER' ] }
                     admin:    { password: adminpass, roles: [ 'ROLE_ADMIN' ]}
-
+                    yan:    { password: test, roles: [ 'ROLE_ADMIN'] }
+  
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
         dev:
@@ -23,7 +24,14 @@ security:
             security: false
 
         main:
-            anonymous: ~
+            pattern: ^/
+            anonymous: true
+            form_login:
+                login_path: login
+                check_path: login_check
+            logout:
+                path: logout
+                target: login
             # activate different ways to authenticate
 
             # http_basic: ~
